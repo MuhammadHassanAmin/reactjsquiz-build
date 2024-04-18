@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://reactjsquiz.com</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/about</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/contact-us</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/privacy-policy</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/basic</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useCallback</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useContext</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useEffect</loc><lastmod>2024-04-18T12:57:23.261Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useImperativeHandle</loc><lastmod>2024-04-18T12:57:23.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useMemo</loc><lastmod>2024-04-18T12:57:23.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useReducer</loc><lastmod>2024-04-18T12:57:23.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useRef</loc><lastmod>2024-04-18T12:57:23.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/hooks/useState</loc><lastmod>2024-04-18T12:57:23.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://reactjsquiz.com/quizzes/topics</loc><lastmod>2024-04-18T12:57:23.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com</loc><lastmod>2024-04-18T13:05:33.024Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/about</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/contact-us</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/privacy-policy</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/basic</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useCallback</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useContext</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useEffect</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useImperativeHandle</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useMemo</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useReducer</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useRef</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/hooks/useState</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://reactjsquiz.com/quizzes/topics</loc><lastmod>2024-04-18T13:05:33.025Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
