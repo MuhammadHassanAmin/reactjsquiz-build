@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/lZgJ37Lw9c74IhoMNm63y/_buildManifest.js",
-    "static/lZgJ37Lw9c74IhoMNm63y/_ssgManifest.js"
+    "static/P8w5J1bhWfq0Py1jGbeT0/_buildManifest.js",
+    "static/P8w5J1bhWfq0Py1jGbeT0/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -23,7 +23,7 @@
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
       "static/chunks/main-c0ef008321023cfb.js",
-      "static/css/5fb2cc191f80f717.css",
+      "static/css/222c299d9336c0a0.css",
       "static/chunks/pages/_app-f5a9f1f8a38f6156.js"
     ],
     "/_error": [
@@ -40,177 +40,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/css/38428634c1f84937.css",
       "static/chunks/pages/about-e125f734bc2f5618.js"
-    ],
-    "/basic/a-component-name-must-start-with-a-letter": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/a-component-name-must-start-with-a-letter-bebaa6896eaf6616.js"
-    ],
-    "/basic/a-react-component-takes-in-parameters-called": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/a-react-component-takes-in-parameters-called-3200c99b6d377bc9.js"
-    ],
-    "/basic/applications-built-with-just-react-usually-have-a-single": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/applications-built-with-just-react-usually-have-a-single-69e15da07de1f953.js"
-    ],
-    "/basic/are-the-smallest-building-blocks-of-react-apps": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/are-the-smallest-building-blocks-of-react-apps-957914bf7e483b85.js"
-    ],
-    "/basic/can-a-component-modify-its-own-props": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/can-a-component-modify-its-own-props-6cd469e4d46fe8f5.js"
-    ],
-    "/basic/can-we-render-a-react-component-from-another-component": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/can-we-render-a-react-component-from-another-component-2f5592a0266bd7b8.js"
-    ],
-    "/basic/can-we-update-the-react-elements-once-they-are-rendered": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/can-we-update-the-react-elements-once-they-are-rendered-021aa00dada13efa.js"
-    ],
-    "/basic/if-a-component-returns-null-are-its-lifecycle-methods-still-called": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/if-a-component-returns-null-are-its-lifecycle-methods-still-called-fef32eb5bc824166.js"
-    ],
-    "/basic/in-order-to-prevent-a-component-from-rendering-it-should-return": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/in-order-to-prevent-a-component-from-rendering-it-should-return-c07137c410ee6d13.js"
-    ],
-    "/basic/in-react-data-flows-in": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/in-react-data-flows-in-9abe87e92ee2098f.js"
-    ],
-    "/basic/jsx-stands-for": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/jsx-stands-for-50eaf52d4d4ea31a.js"
-    ],
-    "/basic/react-dom-uses-case-property-naming-convention": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/react-dom-uses-case-property-naming-convention-1ff8dfa01ba17959.js"
-    ],
-    "/basic/react-is-a-javascript-library-for-building": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/react-is-a-javascript-library-for-building-d9bb5a5c0f80adea.js"
-    ],
-    "/basic/state-of-a-component-is-often-called-data": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/state-of-a-component-is-often-called-data-c0d356f252d42cd0.js"
-    ],
-    "/basic/to-write-html-in-react-we-make-use-of": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/to-write-html-in-react-we-make-use-of-a79f078cd61721e9.js"
-    ],
-    "/basic/user-interface-developed-with-react-is-made-of-small-and-isolated-pieces-of-code-called": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/user-interface-developed-with-react-is-made-of-small-and-isolated-pieces-of-code-called-d6ecfae68cb011e1.js"
-    ],
-    "/basic/what-are-the-two-main-types-of-components-in-react-js": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/what-are-the-two-main-types-of-components-in-react-js-1bde82e84f117603.js"
-    ],
-    "/basic/which-component-lifecycle-method-is-used-to-perform-the-cleanup-when-the-component-is-removed-from-the-dom": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/which-component-lifecycle-method-is-used-to-perform-the-cleanup-when-the-component-is-removed-from-the-dom-e6462525340e0667.js"
-    ],
-    "/basic/which-component-lifecycle-method-runs-after-the-component-output-has-been-rendered-to-the-dom": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/chunks/25675-a999eda8fe59a056.js",
-      "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/basic/which-component-lifecycle-method-runs-after-the-component-output-has-been-rendered-to-the-dom-1cd2fb3ee9f85055.js"
     ],
     "/blog": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -312,7 +141,7 @@
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/quiz-result-654a9b33bf5c0d83.js"
+      "static/chunks/pages/quiz-result-3cf0a0d509e6b55f.js"
     ],
     "/quizzes": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -321,12 +150,6 @@
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/css/38428634c1f84937.css",
       "static/chunks/pages/quizzes-86c3bb78f38e7311.js"
-    ],
-    "/quizzes/basic": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/basic-2718a78dc8bfbb76.js"
     ],
     "/quizzes/basic/a-component-name-must-start-with-a-letter": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -1055,12 +878,6 @@
       "static/css/38428634c1f84937.css",
       "static/chunks/pages/quizzes/hooks-1ee4ec2e64356c17.js"
     ],
-    "/quizzes/hooks/useCallback": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useCallback-2361d410c161092e.js"
-    ],
     "/quizzes/hooks/useCallback/can-usecallback-be-used-to-memoize-asynchronous-functions": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -1241,12 +1058,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useCallback/when-should-you-use-the-usecallback-hook-53eac54e3cf0ebd0.js"
     ],
-    "/quizzes/hooks/useContext": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useContext-d3830e7f8e91d855.js"
-    ],
     "/quizzes/hooks/useContext/can-you-use-the-usecontext-hook-inside-a-class-component": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -1426,12 +1237,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useContext/when-using-the-usecontext-hook-in-react-js-what-is-the-primary-purpose-of-the-context-provider-7156e31d77e897cf.js"
-    ],
-    "/quizzes/hooks/useEffect": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useEffect-f4df965b61dbb199.js"
     ],
     "/quizzes/hooks/useEffect/can-the-useeffect-hook-be-used-to-perform-data-fetching": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -1631,12 +1436,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useEffect/which-of-the-following-is-associated-with-the-execution-of-useeffect-in-react-59a5a0df9ba50619.js"
     ],
-    "/quizzes/hooks/useImperativeHandle": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useImperativeHandle-2d484010c6cf7952.js"
-    ],
     "/quizzes/hooks/useImperativeHandle/can-the-useimperativehandle-hook-be-used-to-expose-methods-from-class-components": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -1816,12 +1615,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useImperativeHandle/when-should-you-use-the-useimperativehandle-hook-470b570508e75163.js"
-    ],
-    "/quizzes/hooks/useMemo": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useMemo-f21ac272cc6c2601.js"
     ],
     "/quizzes/hooks/useMemo/can-the-usememo-hook-be-used-to-memoize-complex-computations": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -2003,12 +1796,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useMemo/when-should-you-use-the-usememo-hook-cc9c0fdcf5df04f5.js"
     ],
-    "/quizzes/hooks/useReducer": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useReducer-4b12ce0b6ef0794a.js"
-    ],
     "/quizzes/hooks/useReducer/how-can-you-access-the-current-state-in-the-usereducer-hook": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -2189,12 +1976,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useReducer/when-using-usereducer-where-is-the-state-typically-defined-874b54d76fd19f7c.js"
     ],
-    "/quizzes/hooks/useRef": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useRef-d34948612199eefc.js"
-    ],
     "/quizzes/hooks/useRef/can-the-useref-hook-be-used-to-access-and-modify-dom-elements": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -2319,7 +2100,7 @@
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/quizzes/hooks/useRef/what-is-the-primary-difference-between-useref-and-usestate-f2bf4c16b8e7968d.js"
+      "static/chunks/pages/quizzes/hooks/useRef/what-is-the-primary-difference-between-useref-and-usestate-84d4d2a34ac2862b.js"
     ],
     "/quizzes/hooks/useRef/what-is-the-primary-purpose-of-the-useref-hook-in-react": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -2374,12 +2155,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/hooks/useRef/when-should-you-use-the-useref-hook-7356ef2780db2d3e.js"
-    ],
-    "/quizzes/hooks/useState": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/quizzes/hooks/useState-6a760ba69ebef1e5.js"
     ],
     "/quizzes/hooks/useState/can-we-use-the-usestate-hook-inside-conditional-statements-such-as-if-or-while": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -3312,7 +3087,7 @@
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/quizzes/react-router/BrowserRouter/can-browserrouter-be-used-for-server-side-rendering-5132d46a3fe066c5.js"
+      "static/chunks/pages/quizzes/react-router/BrowserRouter/can-browserrouter-be-used-for-server-side-rendering-1dabeaba4fdcfec7.js"
     ],
     "/quizzes/react-router/BrowserRouter/can-you-nest-route-components-inside-browserrouter": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -4340,14 +4115,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/quizzes/react-router/useParams/which-hook-is-used-to-access-url-parameters-in-a-react-router-component-440a80dbbe24d433.js"
     ],
-    "/quizzes/topics": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/41966-229f1b3ffe43d0af.js",
-      "static/css/38428634c1f84937.css",
-      "static/chunks/pages/quizzes/topics-8c864945065d15ae.js"
-    ],
     "/react-native-quizzes": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -4355,12 +4122,6 @@
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/css/38428634c1f84937.css",
       "static/chunks/pages/react-native-quizzes-35f7f7fa40feb73d.js"
-    ],
-    "/react-native-quizzes/api-integration": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/api-integration-b094caadf239d415.js"
     ],
     "/react-native-quizzes/api-integration/how-can-you-display-data-fetched-from-an-api-in-a-react-native-app": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -4542,12 +4303,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/api-integration/which-methods-can-be-used-for-fetching-data-from-restful-apis-in-react-native-856f3c7111e5a181.js"
     ],
-    "/react-native-quizzes/component-lifecycle": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/component-lifecycle-43a103b70af264cf.js"
-    ],
     "/react-native-quizzes/component-lifecycle/how-do-you-define-lifecycle-methods-in-react-native": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -4718,12 +4473,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/component-lifecycle/when-does-the-shouldcomponentupdate-method-in-react-native-get-called-d4b69520d239d0a3.js"
-    ],
-    "/react-native-quizzes/components-and-ui": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/components-and-ui-3e702ca17067b760.js"
     ],
     "/react-native-quizzes/components-and-ui/how-can-you-add-custom-fonts-to-your-react-native-application": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -4905,12 +4654,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/components-and-ui/which-component-is-used-to-handle-user-input-in-react-native-e2c251bf531e20a0.js"
     ],
-    "/react-native-quizzes/debugging-and-testing": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/debugging-and-testing-49d7f7ea68c84d45.js"
-    ],
     "/react-native-quizzes/debugging-and-testing/what-are-common-tools-for-debugging-react-native-apps": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -5091,12 +4834,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/debugging-and-testing/what-is-unit-testing-in-react-native-f99e3e2c6828f9d5.js"
     ],
-    "/react-native-quizzes/device-features-integration": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/device-features-integration-353ccae05af0c8d9.js"
-    ],
     "/react-native-quizzes/device-features-integration/how-can-you-access-the-device-s-camera-in-a-react-native-app": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -5267,12 +5004,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/device-features-integration/what-is-the-purpose-of-using-third-party-libraries-for-device-features-integration-94c4bf786ce21222.js"
-    ],
-    "/react-native-quizzes/navigation": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/navigation-37ed9de86be546b7.js"
     ],
     "/react-native-quizzes/navigation/how-can-you-customize-the-navigation-bar-in-react-navigation": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -5454,12 +5185,6 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/navigation/which-library-is-commonly-used-for-navigation-in-react-native-1efa8fc68e0180e4.js"
     ],
-    "/react-native-quizzes/performance-optimization": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/performance-optimization-ad3ee73fbe3fc417.js"
-    ],
     "/react-native-quizzes/performance-optimization/how-can-you-identify-performance-bottlenecks-in-a-react-native-app": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
@@ -5639,12 +5364,6 @@
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/performance-optimization/why-is-performance-optimization-important-in-react-native-development-dac3cba44f82c6fa.js"
-    ],
-    "/react-native-quizzes/state-management": [
-      "static/chunks/webpack-f617077954ce11a7.js",
-      "static/chunks/framework-a9bb0a3aa321677c.js",
-      "static/chunks/main-c0ef008321023cfb.js",
-      "static/chunks/pages/react-native-quizzes/state-management-c202049e0b5859a4.js"
     ],
     "/react-native-quizzes/state-management/how-do-you-define-a-context-in-react-native": [
       "static/chunks/webpack-f617077954ce11a7.js",
