@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/-GBAn09hZNj3AquI5R0fd/_buildManifest.js",
-    "static/-GBAn09hZNj3AquI5R0fd/_ssgManifest.js"
+    "static/PSEgQF57Y0og-pDFU7E19/_buildManifest.js",
+    "static/PSEgQF57Y0og-pDFU7E19/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -141,7 +141,7 @@
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/quiz-result-654a9b33bf5c0d83.js"
+      "static/chunks/pages/quiz-result-f4c416facae7a028.js"
     ],
     "/quizzes": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -4121,7 +4121,7 @@
       "static/chunks/main-c0ef008321023cfb.js",
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/css/38428634c1f84937.css",
-      "static/chunks/pages/react-native-quizzes-35f7f7fa40feb73d.js"
+      "static/chunks/pages/react-native-quizzes-b6c4610f25dacf9b.js"
     ],
     "/react-native-quizzes/api-integration/how-can-you-display-data-fetched-from-an-api-in-a-react-native-app": [
       "static/chunks/webpack-f617077954ce11a7.js",
@@ -5473,14 +5473,14 @@
       "static/chunks/7426-d2f2befb0cf308c6.js",
       "static/chunks/pages/react-native-quizzes/state-management/what-is-redux-in-react-native-67f8a2efe4eca275.js"
     ],
-    "/react-native-quizzes/state-management/what-is-state-management-in-react-native": [
+    "/react-native-quizzes/state-management/what-is-the-primary-purpose-of-state-management-in-react-native": [
       "static/chunks/webpack-f617077954ce11a7.js",
       "static/chunks/framework-a9bb0a3aa321677c.js",
       "static/chunks/main-c0ef008321023cfb.js",
       "static/chunks/41966-229f1b3ffe43d0af.js",
       "static/chunks/25675-a999eda8fe59a056.js",
       "static/chunks/7426-d2f2befb0cf308c6.js",
-      "static/chunks/pages/react-native-quizzes/state-management/what-is-state-management-in-react-native-9c975f5fb55c1f14.js"
+      "static/chunks/pages/react-native-quizzes/state-management/what-is-the-primary-purpose-of-state-management-in-react-native-c7470d91fd598ede.js"
     ],
     "/react-native-quizzes/state-management/what-is-the-purpose-of-actions-in-redux": [
       "static/chunks/webpack-f617077954ce11a7.js",
