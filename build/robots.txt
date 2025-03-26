@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://reactjsquiz.com
-
-# Sitemaps
-Sitemap: https://reactjsquiz.com/sitemap.xml

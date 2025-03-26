@@ -1,1 +1,0 @@
-{"pageProps":{"title":"React Memoization Techniques: useMemo vs useCallback","description":"Memoization is a performance optimization technique used to avoid redundant calculations by storing the results of expensive function calls and reusing them when the same inputs occur again."},"__N_SSG":true}
