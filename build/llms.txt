@@ -1,0 +1,43 @@
+# React JS Quiz
+
+> Free interactive quizzes and MCQs to prepare for React.js technical interviews, covering Hooks, component lifecycle, performance, testing, TypeScript, state management, and more.
+
+ReactJsQuiz.com offers structured multiple-choice questions with explanations across every major React topic, plus a blog with in-depth interview-prep articles. Each quiz question includes the correct answer and a short explanation grounded in real React behavior.
+
+## Quiz topics
+
+- [React Basics](https://reactjsquiz.com/quizzes/basic): Fundamentals of React, JSX, components, props, and state.
+- [Hooks](https://reactjsquiz.com/quizzes/hooks): useState, useEffect, useCallback, useMemo, useRef, useReducer, useContext, useImperativeHandle, useTransition, useDeferredValue, useSyncExternalStore, useId, useLayoutEffect, useInsertionEffect, useDebugValue, useOptimistic, and custom hooks.
+- [Component Lifecycle](https://reactjsquiz.com/quizzes/component-lifecycle): Mounting, updating, and unmounting phases in class and functional components.
+- [Performance Optimization](https://reactjsquiz.com/quizzes/performance-optimization): Memoization, React.memo, code splitting, lazy loading, and rendering optimizations.
+- [React Patterns](https://reactjsquiz.com/quizzes/react-patterns): Higher-order components, render props, compound components, and common design patterns.
+- [React APIs](https://reactjsquiz.com/quizzes/react-apis): React.memo, forwardRef, createContext, lazy, Suspense, and other top-level APIs.
+- [React Router](https://reactjsquiz.com/quizzes/react-router): Routing, navigation, dynamic routes, and route guards.
+- [React Forms](https://reactjsquiz.com/quizzes/react-forms): Controlled and uncontrolled inputs, validation, and submit handling.
+- [Error Boundaries](https://reactjsquiz.com/quizzes/error-boundaries): componentDidCatch, getDerivedStateFromError, fallback UI, and error-handling limits.
+- [Portals](https://reactjsquiz.com/quizzes/portals): createPortal, modal rendering, event bubbling through portals, and context behavior.
+- [Suspense](https://reactjsquiz.com/quizzes/suspense): Suspense boundaries, fallbacks, lazy components, nested loading states, and transitions.
+- [React Testing](https://reactjsquiz.com/quizzes/react-testing): React Testing Library, component tests, queries, user events, and async testing.
+- [TypeScript with React](https://reactjsquiz.com/quizzes/react-typescript): Typing props, events, children, refs, hooks, and common React types.
+- [State Management Libraries](https://reactjsquiz.com/quizzes/state-management-libraries): Redux Toolkit, Zustand, TanStack Query, client vs. server state, selectors, and tradeoffs.
+- [React Native Quizzes](https://reactjsquiz.com/react-native-quizzes): Quizzes for React Native — navigation, components and UI, performance, device features, state management, and debugging.
+
+## Blog
+
+- [5 Fundamental React Hooks Every Developer Should Know](https://reactjsquiz.com/blog/5-fundamental-react-hooks-every-developer-should-know): useState, useEffect, useContext, useRef, and useImperativeHandle explained for interview prep.
+- [Understanding the Virtual DOM in React](https://reactjsquiz.com/blog/understanding-the-virtual-dom-in-react): How React's Virtual DOM diffs and reconciles updates against the real DOM.
+- [State Management in React: useState, useReducer, and Context API](https://reactjsquiz.com/blog/state-management-in-react-a-guide-to-usestate-usereducer-and-context-api): When to use each state primitive and how they compare.
+- [React Performance Optimization Techniques](https://reactjsquiz.com/blog/react-performance-optimization-techniques): Memoization, code splitting, and rendering optimizations for scaling React apps.
+- [Understanding Prop Drilling in React and How to Avoid It](https://reactjsquiz.com/blog/understanding-prop-drilling-in-react-and-how-to-avoid-it): Patterns for replacing prop drilling with Context or composition.
+- [Understanding Refs in React and When to Use Them](https://reactjsquiz.com/blog/understanding-refs-in-react-and-when-to-use-them): useRef, forwardRef, and accessing the DOM or component instances directly.
+- [Integrating Third-Party Libraries in React](https://reactjsquiz.com/blog/integrating-third-party-libraries-in-react): How to wrap, adapt, and use external libraries inside React applications.
+- [React Memoization Techniques: useMemo vs useCallback](https://reactjsquiz.com/blog/react-memoization-techniques-usememo-vs-usecallback): When to use useMemo vs useCallback and how each affects re-renders.
+- [How to Manage Side Effects with useEffect in React](https://reactjsquiz.com/blog/how-to-manage-side-effects-with-useeffect-in-react): Data fetching, subscriptions, cleanup, and the dependency array.
+- [React DevTools: A Guide for Debugging Your React Apps](https://reactjsquiz.com/blog/react-devtools-a-guide-for-debugging-your-react-apps): Inspecting components, hooks, and performance profiling in the browser.
+
+## Site
+
+- [About](https://reactjsquiz.com/about): Background and purpose of ReactJsQuiz.com.
+- [Contact](https://reactjsquiz.com/contact-us): Get in touch.
+- [Privacy Policy](https://reactjsquiz.com/privacy-policy): Privacy practices.
+- [Sitemap](https://reactjsquiz.com/sitemap.xml): Full XML sitemap.
