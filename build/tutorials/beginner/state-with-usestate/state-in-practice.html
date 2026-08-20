@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>State in Practice | State with useState | React Tutorial</title><link rel="canonical" href="https://reactjsquiz.com/tutorials/beginner/state-with-usestate/state-in-practice"/><meta property="og:type" content="website"/><meta property="og:site_name" content="React JS Quiz"/><meta property="og:title" content="State in Practice | State with useState | React Tutorial"/><meta property="og:description" content="Sharing state between components and building a working counter. Two sibling components cannot see each other&#x27;s state. When both need the same value, move it..."/><meta property="og:url" content="https://reactjsquiz.com/tutorials/beginner/state-with-usestate/state-in-practice"/><meta property="og:image" content="https://reactjsquiz.com/apple-touch-icon.png"/><meta property="og:locale" content="en_GB"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="State in Practice | State with useState | React Tutorial"/><meta name="twitter:description" content="Sharing state between components and building a working counter. Two sibling components cannot see each other&#x27;s state. When both need the same value, move it..."/><meta name="twitter:image" content="https://reactjsquiz.com/apple-touch-icon.png"/><meta name="google-adsense-account" content="ca-pub-7544108447932228"/><meta name="impact-site-verification" value="a0e1a89a-390d-4f5b-97ae-da930b270628"/><meta name="description" content="Sharing state between components and building a working counter. Two sibling components cannot see each other&#x27;s state. When both need the same value, move it..."/><meta http-equiv="content-language" content="en-gb"/><link rel="icon" href="/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="manifest" href="/site.webmanifest"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZW8BQT2FR5"></script><script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZW8BQT2FR5', {
+              page_path: window.location.pathname,
+            });
+          </script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7544108447932228" crossorigin="anonymous"></script><link rel="prev" href="https://reactjsquiz.com/tutorials/beginner/state-with-usestate/objects-and-arrays-in-state"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"State in Practice","description":"Sharing state between components and building a working counter.","url":"https://reactjsquiz.com/tutorials/beginner/state-with-usestate/state-in-practice","mainEntityOfPage":{"@type":"WebPage","@id":"https://reactjsquiz.com/tutorials/beginner/state-with-usestate/state-in-practice"},"inLanguage":"en","isAccessibleForFree":true,"proficiencyLevel":"Beginner","articleSection":"State with useState","keywords":"usestate, state, hooks, setstate, updater function","author":{"@type":"Organization","name":"React JS Quiz","url":"https://reactjsquiz.com","logo":{"@type":"ImageObject","url":"https://reactjsquiz.com/apple-touch-icon.png"}},"publisher":{"@type":"Organization","name":"React JS Quiz","url":"https://reactjsquiz.com","logo":{"@type":"ImageObject","url":"https://reactjsquiz.com/apple-touch-icon.png"}},"isPartOf":{"@type":"Course","name":"State with useState","url":"https://reactjsquiz.com/tutorials/beginner/state-with-usestate"},"datePublished":"2026-08-20","dateModified":"2026-08-20"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://reactjsquiz.com/"},{"@type":"ListItem","position":2,"name":"Tutorials","item":"https://reactjsquiz.com/tutorials"},{"@type":"ListItem","position":3,"name":"Beginner","item":"https://reactjsquiz.com/tutorials/beginner"},{"@type":"ListItem","position":4,"name":"State with useState","item":"https://reactjsquiz.com/tutorials/beginner/state-with-usestate"},{"@type":"ListItem","position":5,"name":"State in Practice","item":"https://reactjsquiz.com/tutorials/beginner/state-with-usestate/state-in-practice"}]}</script><meta name="next-head-count" content="30"/><link rel="preload" href="/_next/static/css/c6d440f2379b8b2a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/c6d440f2379b8b2a.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-f617077954ce11a7.js" defer=""></script><script src="/_next/static/chunks/framework-a9bb0a3aa321677c.js" defer=""></script><script src="/_next/static/chunks/main-c0ef008321023cfb.js" defer=""></script><script src="/_next/static/chunks/pages/_app-7925749186a10d7e.js" defer=""></script><script src="/_next/static/chunks/41966-229f1b3ffe43d0af.js" defer=""></script><script src="/_next/static/chunks/28490-402d1ddd784954a8.js" defer=""></script><script src="/_next/static/chunks/pages/tutorials/%5Blevel%5D/%5Btutorial%5D/%5Bchapter%5D-9a40f50d5ac4538a.js" defer=""></script><script src="/_next/static/_pvC7_Dc0LHpeFEeOU4PS/_buildManifest.js" defer=""></script><script src="/_next/static/_pvC7_Dc0LHpeFEeOU4PS/_ssgManifest.js" defer=""></script></head><body><div id="__next"><header class="border-b"><nav class="bg-white shadow dark:bg-gray-800"><div class="container px-6 py-3 mx-auto lg:flex lg:items-center"><div class="flex w-full items-center justify-between lg:w-auto lg:shrink-0"><a href="/"><span class="whitespace-nowrap text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">React JS Quiz</span></a><div class="flex lg:hidden"><button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu"><svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg></button></div></div><div class="w-full lg:flex lg:min-w-0 lg:flex-1 lg:items-center lg:justify-end hidden"><div class="flex flex-col px-2 py-3 -mx-4 lg:mx-0 lg:flex-row lg:items-center lg:justify-end lg:py-0"><a class="flex mb-1" href="/"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Home</span></a><a class="flex mb-1" href="/blog"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Blog</span></a><a class="flex mb-1" href="/privacy-policy"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Privacy Policy</span></a><a class="flex mb-1" href="/contact-us"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Contact Us</span></a><a class="flex mb-1" href="/tutorials"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Tutorials<span class="rounded-full bg-yellow-500 px-1.5 py-0.5 text-[10px] font-bold leading-none text-white">New</span></span></a><a href="https://reactjsquiz.lemonsqueezy.com/checkout/buy/0350c921-370c-4ef1-a6bb-481c043f5428?embed=1" class="lemonsqueezy-button inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full sm:w-auto mt-2 shrink-0 whitespace-nowrap lg:mt-0 lg:ml-3"><svg aria-hidden="true" class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M6 3v2M10 3v2M14 3v2M4 21h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Buy me a coffee</a></div></div></div></nav></header><main class=" flex flex-col justify-center items-center py-5 h-full"><div class="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-4 lg:grid-cols-[minmax(220px,280px)_minmax(0,760px)_minmax(160px,300px)] lg:items-start lg:px-6"><div class="min-w-0 lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto"><nav aria-label="Tutorial chapters"><button type="button" class="mb-3 flex w-full items-center justify-between rounded-lg border border-gray-200 px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:border-gray-700 dark:text-gray-200 lg:hidden" aria-expanded="false"><span>Chapters in <!-- -->State with useState</span><span>↓</span></button><div class="lg:block hidden"><p class="mb-2 hidden text-xs font-bold uppercase tracking-wider text-gray-500 lg:block">State with useState</p><ol class="space-y-1"><li><a class="block rounded px-3 py-2 text-sm transition-colors text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800" href="/tutorials/beginner/state-with-usestate/why-state-exists"><span class="mr-2 opacity-60">1<!-- -->.</span>Why State Exists</a></li><li><a class="block rounded px-3 py-2 text-sm transition-colors text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800" href="/tutorials/beginner/state-with-usestate/updates-are-asynchronous"><span class="mr-2 opacity-60">2<!-- -->.</span>Updates Are Asynchronous</a></li><li><a class="block rounded px-3 py-2 text-sm transition-colors text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800" href="/tutorials/beginner/state-with-usestate/objects-and-arrays-in-state"><span class="mr-2 opacity-60">3<!-- -->.</span>Objects and Arrays in State</a></li><li><a class="block rounded px-3 py-2 text-sm transition-colors bg-blue-600 font-semibold text-white" href="/tutorials/beginner/state-with-usestate/state-in-practice"><span class="mr-2 opacity-60">4<!-- -->.</span>State in Practice</a></li><li class="pt-2"><a class="block rounded px-3 py-2 text-sm font-semibold transition-colors text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800" href="/tutorials/beginner/state-with-usestate/quiz">🏁 End-of-tutorial quiz</a></li></ol><aside aria-label="Advertisement" class="ad-placement w-full text-center mt-8 hidden lg:block"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[600px]" style="display:block;min-height:600px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6208304795" data-ad-format="auto" data-full-width-responsive="true"></ins></aside></div></nav></div><div class="min-w-0"><nav aria-label="Breadcrumb" class="mb-4 text-sm text-gray-500 dark:text-gray-400"><a class="hover:underline" href="/tutorials">Tutorials</a><span class="mx-2">/</span><a class="hover:underline" href="/tutorials/beginner">Beginner</a><span class="mx-2">/</span><a class="hover:underline" href="/tutorials/beginner/state-with-usestate">State with useState</a><span class="mx-2">/</span><span class="text-gray-700 dark:text-gray-200">State in Practice</span></nav><article><p class="mb-1 text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Chapter <!-- -->4<!-- --> of <!-- -->4</p><h1 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">State in Practice</h1><p class="mb-6 text-lg text-gray-600 dark:text-gray-400">Sharing state between components and building a working counter.</p><div><p class="my-4 leading-7 text-gray-700 dark:text-gray-300">Two sibling components cannot see each other&#x27;s state. When both need the same value, move it up to their closest common parent. This is called <strong class="font-semibold">lifting state up</strong>.</p><figure class="my-5"><figcaption class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">One source of truth in the parent, two children kept in sync.</figcaption><div class="overflow-x-auto rounded-lg bg-gray-800"><pre class="p-4 font-mono text-sm leading-6 text-gray-100"><code>function Thermostat() {
+  const [temperature, setTemperature] = useState(20);
+
+  return (
+    &lt;&gt;
+      &lt;Display value={temperature} /&gt;
+      &lt;Slider value={temperature} onChange={setTemperature} /&gt;
+    &lt;/&gt;
+  );
+}
+
+function Display({ value }) {
+  return &lt;p&gt;{value} degrees&lt;/p&gt;;
+}
+
+function Slider({ value, onChange }) {
+  return (
+    &lt;input
+      type=&quot;range&quot;
+      value={value}
+      onChange={(event) =&gt; onChange(Number(event.target.value))}
+    /&gt;
+  );
+}</code></pre></div></figure><h2 class="mt-8 mb-3 text-xl font-bold text-gray-900 dark:text-white md:text-2xl">Where should a piece of state live?</h2><ol class="my-4 list-decimal space-y-2 pl-6 text-gray-700 dark:text-gray-300"><li class="leading-7">Find every component that reads the value.</li><li class="leading-7">Find their closest common parent.</li><li class="leading-7">Put the state there, and pass the value and an updater down.</li></ol><aside class="my-6 rounded-r-lg border-l-4 p-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20"><p class="mb-1 text-sm font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200">Note</p><p class="leading-7 text-gray-700 dark:text-gray-300">If the common parent is many levels up, you are hitting prop drilling. Context or a state library solves that, and both are covered in the intermediate track.</p></aside><section class="my-8 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"><header class="border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><h3 class="text-lg font-semibold text-gray-900 dark:text-white">Write the counter update logic</h3><p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Complete nextCount so it adds the step to the current value, but never goes below zero.</p></header><div class="flex bg-gray-800"><div aria-hidden="true" class="select-none border-r border-gray-700 bg-gray-900 py-3 px-2 text-right font-mono text-xs leading-6 text-gray-500"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div><textarea spellcheck="false" autoCapitalize="off" autoCorrect="off" aria-label="Code editor for Write the counter update logic" rows="8" class="w-full resize-y bg-gray-800 p-3 font-mono text-sm leading-6 text-gray-100 outline-none">function nextCount(current, step) {
+  // Add step to current, but never return less than 0
+}
+
+console.log(nextCount(3, 1));
+console.log(nextCount(0, -1));</textarea></div><div class="flex flex-wrap gap-2 border-t border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><button type="button" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-60">Run code</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Reset</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Show solution</button></div><iframe title="Sandbox for Write the counter update logic" sandbox="allow-scripts" srcDoc="&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;style&gt;
+      html, body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+      body { padding: 12px; color: #0f172a; background: #ffffff; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      (function () {
+        var TARGET = &quot;reactjsquiz-runner&quot;;
+        var logs = [];
+
+        function serialise(value) {
+          if (typeof value === &quot;string&quot;) return value;
+          try {
+            return JSON.stringify(value);
+          } catch (error) {
+            return String(value);
+          }
+        }
+
+        [&quot;log&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;].forEach(function (level) {
+          var original = console[level];
+          console[level] = function () {
+            logs.push({
+              level: level,
+              text: Array.prototype.map.call(arguments, serialise).join(&quot; &quot;),
+            });
+            if (original) original.apply(console, arguments);
+          };
+        });
+
+        function post(payload) {
+          parent.postMessage(Object.assign({ source: TARGET }, payload), &quot;*&quot;);
+        }
+
+        function loadScript(src) {
+          return new Promise(function (resolve, reject) {
+            var tag = document.createElement(&quot;script&quot;);
+            tag.src = src;
+            tag.onload = resolve;
+            tag.onerror = function () {
+              reject(new Error(&quot;Could not load &quot; + src));
+            };
+            document.head.appendChild(tag);
+          });
+        }
+
+        var dependencies = [];
+
+        var ready = dependencies.reduce(function (chain, src) {
+          return chain.then(function () {
+            return loadScript(src);
+          });
+        }, Promise.resolve());
+
+        function runChecks(tests) {
+          return (tests || []).map(function (test) {
+            try {
+              var passed = new Function(test.code)();
+              return {
+                name: test.name,
+                passed: passed !== false &amp;&amp; passed !== undefined,
+              };
+            } catch (error) {
+              return { name: test.name, passed: false, error: error.message };
+            }
+          });
+        }
+
+        function run(message) {
+          logs = [];
+          document.getElementById(&quot;root&quot;).innerHTML = &quot;&quot;;
+
+          try {
+            var source = message.code;
+            if (false) {
+              // The classic runtime compiles JSX to React.createElement, which
+              // the UMD global provides. The automatic runtime would emit an
+              // import of react/jsx-runtime, which eval cannot resolve.
+              source = window.Babel.transform(source, {
+                presets: [&quot;env&quot;, [&quot;react&quot;, { runtime: &quot;classic&quot; }]],
+              }).code;
+            }
+            // Indirect eval keeps top-level function declarations on the global
+            // object, which is what the checks below look for.
+            (0, eval)(source);
+          } catch (error) {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: [],
+              error: error.message,
+            });
+            return;
+          }
+
+          function finish() {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: runChecks(message.tests),
+            });
+          }
+
+          // React renders concurrently, so give it a tick to commit before the
+          // checks look at the DOM.
+          if (false) {
+            setTimeout(finish, 80);
+          } else {
+            finish();
+          }
+        }
+
+        window.addEventListener(&quot;message&quot;, function (event) {
+          if (!event.data || event.data.type !== &quot;run&quot;) return;
+          ready
+            .then(function () {
+              run(event.data);
+            })
+            .catch(function (error) {
+              post({ type: &quot;result&quot;, logs: [], tests: [], error: error.message });
+            });
+        });
+
+        window.addEventListener(&quot;error&quot;, function (event) {
+          post({ type: &quot;runtime-error&quot;, message: event.message });
+        });
+
+        post({ type: &quot;ready&quot; });
+      })();
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" class="w-full border-0 bg-white h-0"></iframe></section><section class="my-8 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"><header class="border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><h3 class="text-lg font-semibold text-gray-900 dark:text-white">Build a working counter component</h3><p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Wire the buttons so Add increases the count and Reset sets it back to 0. Use the updater form for Add.</p></header><div class="flex bg-gray-800"><div aria-hidden="true" class="select-none border-r border-gray-700 bg-gray-900 py-3 px-2 text-right font-mono text-xs leading-6 text-gray-500"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div></div><textarea spellcheck="false" autoCapitalize="off" autoCorrect="off" aria-label="Code editor for Build a working counter component" rows="16" class="w-full resize-y bg-gray-800 p-3 font-mono text-sm leading-6 text-gray-100 outline-none">const { useState } = React;
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p id=&quot;value&quot;&gt;{count}&lt;/p&gt;
+      &lt;button id=&quot;add&quot;&gt;Add&lt;/button&gt;
+      &lt;button id=&quot;reset&quot;&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+ReactDOM.createRoot(document.getElementById(&quot;root&quot;)).render(&lt;Counter /&gt;);</textarea></div><div class="flex flex-wrap gap-2 border-t border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><button type="button" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-60">Run code</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Reset</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Show solution</button></div><iframe title="Sandbox for Build a working counter component" sandbox="allow-scripts" srcDoc="&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;style&gt;
+      html, body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+      body { padding: 12px; color: #0f172a; background: #ffffff; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      (function () {
+        var TARGET = &quot;reactjsquiz-runner&quot;;
+        var logs = [];
+
+        function serialise(value) {
+          if (typeof value === &quot;string&quot;) return value;
+          try {
+            return JSON.stringify(value);
+          } catch (error) {
+            return String(value);
+          }
+        }
+
+        [&quot;log&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;].forEach(function (level) {
+          var original = console[level];
+          console[level] = function () {
+            logs.push({
+              level: level,
+              text: Array.prototype.map.call(arguments, serialise).join(&quot; &quot;),
+            });
+            if (original) original.apply(console, arguments);
+          };
+        });
+
+        function post(payload) {
+          parent.postMessage(Object.assign({ source: TARGET }, payload), &quot;*&quot;);
+        }
+
+        function loadScript(src) {
+          return new Promise(function (resolve, reject) {
+            var tag = document.createElement(&quot;script&quot;);
+            tag.src = src;
+            tag.onload = resolve;
+            tag.onerror = function () {
+              reject(new Error(&quot;Could not load &quot; + src));
+            };
+            document.head.appendChild(tag);
+          });
+        }
+
+        var dependencies = [&quot;https://unpkg.com/react@18.3.1/umd/react.development.js&quot;, &quot;https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js&quot;, &quot;https://unpkg.com/@babel/standalone@7.29.8/babel.min.js&quot;];
+
+        var ready = dependencies.reduce(function (chain, src) {
+          return chain.then(function () {
+            return loadScript(src);
+          });
+        }, Promise.resolve());
+
+        function runChecks(tests) {
+          return (tests || []).map(function (test) {
+            try {
+              var passed = new Function(test.code)();
+              return {
+                name: test.name,
+                passed: passed !== false &amp;&amp; passed !== undefined,
+              };
+            } catch (error) {
+              return { name: test.name, passed: false, error: error.message };
+            }
+          });
+        }
+
+        function run(message) {
+          logs = [];
+          document.getElementById(&quot;root&quot;).innerHTML = &quot;&quot;;
+
+          try {
+            var source = message.code;
+            if (true) {
+              // The classic runtime compiles JSX to React.createElement, which
+              // the UMD global provides. The automatic runtime would emit an
+              // import of react/jsx-runtime, which eval cannot resolve.
+              source = window.Babel.transform(source, {
+                presets: [&quot;env&quot;, [&quot;react&quot;, { runtime: &quot;classic&quot; }]],
+              }).code;
+            }
+            // Indirect eval keeps top-level function declarations on the global
+            // object, which is what the checks below look for.
+            (0, eval)(source);
+          } catch (error) {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: [],
+              error: error.message,
+            });
+            return;
+          }
+
+          function finish() {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: runChecks(message.tests),
+            });
+          }
+
+          // React renders concurrently, so give it a tick to commit before the
+          // checks look at the DOM.
+          if (true) {
+            setTimeout(finish, 80);
+          } else {
+            finish();
+          }
+        }
+
+        window.addEventListener(&quot;message&quot;, function (event) {
+          if (!event.data || event.data.type !== &quot;run&quot;) return;
+          ready
+            .then(function () {
+              run(event.data);
+            })
+            .catch(function (error) {
+              post({ type: &quot;result&quot;, logs: [], tests: [], error: error.message });
+            });
+        });
+
+        window.addEventListener(&quot;error&quot;, function (event) {
+          post({ type: &quot;runtime-error&quot;, message: event.message });
+        });
+
+        post({ type: &quot;ready&quot; });
+      })();
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" class="w-full border-0 bg-white h-56 border-t border-gray-200 dark:border-gray-700"></iframe></section></div><nav class="mt-10 flex flex-col gap-3 border-t border-gray-200 pt-6 dark:border-gray-700 sm:flex-row sm:justify-between"><a class="rounded-lg border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800" href="/tutorials/beginner/state-with-usestate/objects-and-arrays-in-state">← <!-- -->Objects and Arrays in State</a><a class="rounded-lg bg-green-600 px-4 py-3 text-sm font-semibold text-white hover:bg-green-700" href="/tutorials/beginner/state-with-usestate/quiz">Take the <!-- -->8<!-- --> question quiz →</a></nav></article><aside aria-label="Advertisement" class="ad-placement w-full text-center mt-12 lg:hidden"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[280px]" style="display:block;min-height:280px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6753219060" data-ad-format="auto" data-full-width-responsive="true"></ins></aside></div><div class="hidden lg:sticky lg:top-6 lg:block"><aside aria-label="Advertisement" class="ad-placement w-full text-center max-w-[300px]"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[600px]" style="display:block;min-height:600px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6753219060" data-ad-format="auto" data-full-width-responsive="true"></ins></aside></div></div></main><footer class="bg-white dark:bg-gray-800 dark:text-white p-5 border-t-2  flex flex-col justify-center items-center "><a href="https://reactjsquiz.lemonsqueezy.com/checkout/buy/0350c921-370c-4ef1-a6bb-481c043f5428?embed=1" class="lemonsqueezy-button inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full sm:w-auto"><svg aria-hidden="true" class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M6 3v2M10 3v2M14 3v2M4 21h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Support the developer</a></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"siteName":"React JS Quiz","google_analytics_tracking_id":"G-ZW8BQT2FR5","google_adsense_publisher_id":"pub-7544108447932228","tutorial":{"id":4,"slug":"state-with-usestate","level":"beginner","order":4,"title":"State with useState","seoTitle":"React useState Tutorial: Managing Component State","description":"Add memory to a component with useState, understand why updates are asynchronous and batched, and learn the rules for updating objects and arrays.","estimatedMinutes":16,"topics":["usestate","state","hooks","setstate","updater function"],"publishedAt":"2026-08-20","updatedAt":"2026-08-20","path":"/tutorials/beginner/state-with-usestate","quizPath":"/tutorials/beginner/state-with-usestate/quiz","chapters":[{"slug":"why-state-exists","title":"Why State Exists","description":"The difference between a value that survives a render and one that does not.","order":1,"path":"/tutorials/beginner/state-with-usestate/why-state-exists"},{"slug":"updates-are-asynchronous","title":"Updates Are Asynchronous","description":"Why the value does not change immediately, and what batching means for your code.","order":2,"path":"/tutorials/beginner/state-with-usestate/updates-are-asynchronous"},{"slug":"objects-and-arrays-in-state","title":"Objects and Arrays in State","description":"Why you must replace state instead of mutating it, and the patterns for doing so.","order":3,"path":"/tutorials/beginner/state-with-usestate/objects-and-arrays-in-state"},{"slug":"state-in-practice","title":"State in Practice","description":"Sharing state between components and building a working counter.","order":4,"path":"/tutorials/beginner/state-with-usestate/state-in-practice"}],"chapterCount":4,"exerciseCount":2,"quizQuestionCount":8,"quiz":{"questions":[]}},"chapter":{"slug":"state-in-practice","title":"State in Practice","description":"Sharing state between components and building a working counter.","order":4,"path":"/tutorials/beginner/state-with-usestate/state-in-practice","blocks":[{"type":"paragraph","text":"Two sibling components cannot see each other's state. When both need the same value, move it up to their closest common parent. This is called **lifting state up**."},{"type":"code","code":"function Thermostat() {\n  const [temperature, setTemperature] = useState(20);\n\n  return (\n    \u003c\u003e\n      \u003cDisplay value={temperature} /\u003e\n      \u003cSlider value={temperature} onChange={setTemperature} /\u003e\n    \u003c/\u003e\n  );\n}\n\nfunction Display({ value }) {\n  return \u003cp\u003e{value} degrees\u003c/p\u003e;\n}\n\nfunction Slider({ value, onChange }) {\n  return (\n    \u003cinput\n      type=\"range\"\n      value={value}\n      onChange={(event) =\u003e onChange(Number(event.target.value))}\n    /\u003e\n  );\n}","caption":"One source of truth in the parent, two children kept in sync."},{"type":"heading","text":"Where should a piece of state live?"},{"type":"list","ordered":true,"items":["Find every component that reads the value.","Find their closest common parent.","Put the state there, and pass the value and an updater down."]},{"type":"callout","variant":"note","text":"If the common parent is many levels up, you are hitting prop drilling. Context or a state library solves that, and both are covered in the intermediate track."},{"type":"editor","title":"Write the counter update logic","instructions":"Complete nextCount so it adds the step to the current value, but never goes below zero.","mode":"js","starterCode":"function nextCount(current, step) {\n  // Add step to current, but never return less than 0\n}\n\nconsole.log(nextCount(3, 1));\nconsole.log(nextCount(0, -1));","solution":"function nextCount(current, step) {\n  var next = current + step;\n  return next \u003c 0 ? 0 : next;\n}\n\nconsole.log(nextCount(3, 1));\nconsole.log(nextCount(0, -1));","tests":[{"name":"Counting up works","code":"return nextCount(3, 1) === 4;"},{"name":"Counting down works","code":"return nextCount(3, -1) === 2;"},{"name":"It never goes below zero","code":"return nextCount(0, -1) === 0 \u0026\u0026 nextCount(1, -5) === 0;"}]},{"type":"editor","title":"Build a working counter component","instructions":"Wire the buttons so Add increases the count and Reset sets it back to 0. Use the updater form for Add.","mode":"react","starterCode":"const { useState } = React;\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    \u003cdiv\u003e\n      \u003cp id=\"value\"\u003e{count}\u003c/p\u003e\n      \u003cbutton id=\"add\"\u003eAdd\u003c/button\u003e\n      \u003cbutton id=\"reset\"\u003eReset\u003c/button\u003e\n    \u003c/div\u003e\n  );\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")).render(\u003cCounter /\u003e);","solution":"const { useState } = React;\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    \u003cdiv\u003e\n      \u003cp id=\"value\"\u003e{count}\u003c/p\u003e\n      \u003cbutton id=\"add\" onClick={() =\u003e setCount((previous) =\u003e previous + 1)}\u003e\n        Add\n      \u003c/button\u003e\n      \u003cbutton id=\"reset\" onClick={() =\u003e setCount(0)}\u003e\n        Reset\n      \u003c/button\u003e\n    \u003c/div\u003e\n  );\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")).render(\u003cCounter /\u003e);","tests":[{"name":"The counter starts at 0","code":"return document.getElementById('value').textContent.trim() === '0';"},{"name":"Add has a click handler","code":"var btn = document.getElementById('add'); btn.click(); btn.click(); return true;"},{"name":"Two clicks show 2","code":"return document.getElementById('value').textContent.trim() === '2';"}]}]},"level":{"slug":"beginner","title":"Beginner"},"previous":{"slug":"objects-and-arrays-in-state","title":"Objects and Arrays in State","description":"Why you must replace state instead of mutating it, and the patterns for doing so.","order":3,"path":"/tutorials/beginner/state-with-usestate/objects-and-arrays-in-state","blocks":[{"type":"paragraph","text":"React decides whether to re-render by comparing the new state with the old one by reference. Mutating an object keeps the same reference, so React sees no change and skips the update."},{"type":"code","code":"// Wrong: same object, React sees nothing new\nfunction addTag(tag) {\n  tags.push(tag);\n  setTags(tags);\n}\n\n// Right: a new array\nfunction addTag(tag) {\n  setTags([...tags, tag]);\n}"},{"type":"heading","text":"Array patterns"},{"type":"code","code":"// Add to the end\nsetItems([...items, newItem]);\n\n// Add to the start\nsetItems([newItem, ...items]);\n\n// Remove by id\nsetItems(items.filter((item) =\u003e item.id !== id));\n\n// Replace one item\nsetItems(items.map((item) =\u003e\n  item.id === id ? { ...item, done: true } : item\n));\n\n// Sort without mutating the original\nsetItems([...items].sort((a, b) =\u003e a.name.localeCompare(b.name)));"},{"type":"callout","variant":"gotcha","text":"`push`, `pop`, `splice`, `sort` and `reverse` all mutate in place. Copy first with a spread, or use `map`, `filter`, `concat` and `slice`, which return new arrays."},{"type":"heading","text":"Object patterns"},{"type":"code","code":"const [form, setForm] = useState({ name: \"\", email: \"\" });\n\n// Update one field, keep the rest\nfunction handleChange(field, value) {\n  setForm({ ...form, [field]: value });\n}\n\n// Nested objects need a copy at every level you change\nsetUser({\n  ...user,\n  address: { ...user.address, city: \"Berlin\" },\n});"},{"type":"callout","variant":"tip","text":"Deeply nested state is a signal to flatten your data or to move it into a reducer. If you find yourself spreading three levels deep, restructure instead."},{"type":"heading","text":"Keep state minimal"},{"type":"paragraph","text":"Do not store anything you can calculate from something else. Derived values in state go stale; derived values computed during render never do."},{"type":"code","code":"// Redundant: total can drift out of sync\nconst [items, setItems] = useState([]);\nconst [total, setTotal] = useState(0);\n\n// Better: derive it\nconst [items, setItems] = useState([]);\nconst total = items.reduce((sum, item) =\u003e sum + item.price, 0);"}]},"next":null,"title":"State in Practice | State with useState | React Tutorial","description":"Sharing state between components and building a working counter. Two sibling components cannot see each other's state. When both need the same value, move it..."},"__N_SSG":true},"page":"/tutorials/[level]/[tutorial]/[chapter]","query":{"level":"beginner","tutorial":"state-with-usestate","chapter":"state-in-practice"},"buildId":"_pvC7_Dc0LHpeFEeOU4PS","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

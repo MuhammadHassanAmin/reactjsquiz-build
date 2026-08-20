@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>Conditional Styling and Remounting</title><link rel="canonical" href="https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys"/><meta property="og:type" content="website"/><meta property="og:site_name" content="React JS Quiz"/><meta property="og:title" content="Conditional Styling and Remounting"/><meta property="og:description" content="Toggling classes, and how keys decide whether React reuses or rebuilds an element. Conditional classes are just string expressions. For anything beyond one..."/><meta property="og:url" content="https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys"/><meta property="og:image" content="https://reactjsquiz.com/apple-touch-icon.png"/><meta property="og:locale" content="en_GB"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Conditional Styling and Remounting"/><meta name="twitter:description" content="Toggling classes, and how keys decide whether React reuses or rebuilds an element. Conditional classes are just string expressions. For anything beyond one..."/><meta name="twitter:image" content="https://reactjsquiz.com/apple-touch-icon.png"/><meta name="google-adsense-account" content="ca-pub-7544108447932228"/><meta name="impact-site-verification" value="a0e1a89a-390d-4f5b-97ae-da930b270628"/><meta name="description" content="Toggling classes, and how keys decide whether React reuses or rebuilds an element. Conditional classes are just string expressions. For anything beyond one..."/><meta http-equiv="content-language" content="en-gb"/><link rel="icon" href="/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="manifest" href="/site.webmanifest"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZW8BQT2FR5"></script><script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZW8BQT2FR5', {
+              page_path: window.location.pathname,
+            });
+          </script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7544108447932228" crossorigin="anonymous"></script><link rel="prev" href="https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/conditional-rendering"/><link rel="next" href="https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/putting-it-together"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Conditional Styling and Remounting","description":"Toggling classes, and how keys decide whether React reuses or rebuilds an element.","url":"https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys","mainEntityOfPage":{"@type":"WebPage","@id":"https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys"},"inLanguage":"en","isAccessibleForFree":true,"proficiencyLevel":"Beginner","articleSection":"Events and Conditional Rendering","keywords":"events, event handlers, conditional rendering, onclick, synthetic events","author":{"@type":"Organization","name":"React JS Quiz","url":"https://reactjsquiz.com","logo":{"@type":"ImageObject","url":"https://reactjsquiz.com/apple-touch-icon.png"}},"publisher":{"@type":"Organization","name":"React JS Quiz","url":"https://reactjsquiz.com","logo":{"@type":"ImageObject","url":"https://reactjsquiz.com/apple-touch-icon.png"}},"isPartOf":{"@type":"Course","name":"Events and Conditional Rendering","url":"https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering"},"datePublished":"2026-08-20","dateModified":"2026-08-20"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://reactjsquiz.com/"},{"@type":"ListItem","position":2,"name":"Tutorials","item":"https://reactjsquiz.com/tutorials"},{"@type":"ListItem","position":3,"name":"Beginner","item":"https://reactjsquiz.com/tutorials/beginner"},{"@type":"ListItem","position":4,"name":"Events and Conditional Rendering","item":"https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering"},{"@type":"ListItem","position":5,"name":"Conditional Styling and Remounting","item":"https://reactjsquiz.com/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys"}]}</script><meta name="next-head-count" content="31"/><link rel="preload" href="/_next/static/css/c6d440f2379b8b2a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/c6d440f2379b8b2a.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-f617077954ce11a7.js" defer=""></script><script src="/_next/static/chunks/framework-a9bb0a3aa321677c.js" defer=""></script><script src="/_next/static/chunks/main-c0ef008321023cfb.js" defer=""></script><script src="/_next/static/chunks/pages/_app-7925749186a10d7e.js" defer=""></script><script src="/_next/static/chunks/41966-229f1b3ffe43d0af.js" defer=""></script><script src="/_next/static/chunks/28490-402d1ddd784954a8.js" defer=""></script><script src="/_next/static/chunks/pages/tutorials/%5Blevel%5D/%5Btutorial%5D/%5Bchapter%5D-9a40f50d5ac4538a.js" defer=""></script><script src="/_next/static/_pvC7_Dc0LHpeFEeOU4PS/_buildManifest.js" defer=""></script><script src="/_next/static/_pvC7_Dc0LHpeFEeOU4PS/_ssgManifest.js" defer=""></script></head><body><div id="__next"><header class="border-b"><nav class="bg-white shadow dark:bg-gray-800"><div class="container px-6 py-3 mx-auto lg:flex lg:items-center"><div class="flex w-full items-center justify-between lg:w-auto lg:shrink-0"><a href="/"><span class="whitespace-nowrap text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">React JS Quiz</span></a><div class="flex lg:hidden"><button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu"><svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg></button></div></div><div class="w-full lg:flex lg:min-w-0 lg:flex-1 lg:items-center lg:justify-end hidden"><div class="flex flex-col px-2 py-3 -mx-4 lg:mx-0 lg:flex-row lg:items-center lg:justify-end lg:py-0"><a class="flex mb-1" href="/"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Home</span></a><a class="flex mb-1" href="/blog"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Blog</span></a><a class="flex mb-1" href="/privacy-policy"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Privacy Policy</span></a><a class="flex mb-1" href="/contact-us"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Contact Us</span></a><a class="flex mb-1" href="/tutorials"><span class="flex items-center gap-1 whitespace-nowrap px-2 py-1 w-full text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 lg:mx-1">Tutorials<span class="rounded-full bg-yellow-500 px-1.5 py-0.5 text-[10px] font-bold leading-none text-white">New</span></span></a><a href="https://reactjsquiz.lemonsqueezy.com/checkout/buy/0350c921-370c-4ef1-a6bb-481c043f5428?embed=1" class="lemonsqueezy-button inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full sm:w-auto mt-2 shrink-0 whitespace-nowrap lg:mt-0 lg:ml-3"><svg aria-hidden="true" class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M6 3v2M10 3v2M14 3v2M4 21h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Buy me a coffee</a></div></div></div></nav></header><main class=" flex flex-col justify-center items-center py-5 h-full"><div class="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-4 lg:grid-cols-[minmax(220px,280px)_minmax(0,760px)_minmax(160px,300px)] lg:items-start lg:px-6"><div class="min-w-0 lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto"><nav aria-label="Tutorial chapters"><button type="button" class="mb-3 flex w-full items-center justify-between rounded-lg border border-gray-200 px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:border-gray-700 dark:text-gray-200 lg:hidden" aria-expanded="false"><span>Chapters in <!-- -->Events and Conditional Rendering</span><span>↓</span></button><div class="lg:block hidden"><p class="mb-2 hidden text-xs font-bold uppercase tracking-wider text-gray-500 lg:block">Events and Conditional Rendering</p><ol class="space-y-1"><li><a class="block rounded px-3 py-2 text-sm transition-colors text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800" href="/tutorials/beginner/events-and-conditional-rendering/handling-events"><span class="mr-2 opacity-60">1<!-- -->.</span>Handling Events</a></li><li><a class="block rounded px-3 py-2 text-sm transition-colors text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800" href="/tutorials/beginner/events-and-conditional-rendering/conditional-rendering"><span class="mr-2 opacity-60">2<!-- -->.</span>Conditional Rendering</a></li><li><a class="block rounded px-3 py-2 text-sm transition-colors bg-blue-600 font-semibold text-white" href="/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys"><span class="mr-2 opacity-60">3<!-- -->.</span>Conditional Styling and Remounting</a></li><li><a class="block rounded px-3 py-2 text-sm transition-colors text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800" href="/tutorials/beginner/events-and-conditional-rendering/putting-it-together"><span class="mr-2 opacity-60">4<!-- -->.</span>Putting It Together</a></li><li class="pt-2"><a class="block rounded px-3 py-2 text-sm font-semibold transition-colors text-blue-600 hover:bg-gray-100 dark:text-blue-400 dark:hover:bg-gray-800" href="/tutorials/beginner/events-and-conditional-rendering/quiz">🏁 End-of-tutorial quiz</a></li></ol><aside aria-label="Advertisement" class="ad-placement w-full text-center mt-8 hidden lg:block"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[600px]" style="display:block;min-height:600px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6208304795" data-ad-format="auto" data-full-width-responsive="true"></ins></aside></div></nav></div><div class="min-w-0"><nav aria-label="Breadcrumb" class="mb-4 text-sm text-gray-500 dark:text-gray-400"><a class="hover:underline" href="/tutorials">Tutorials</a><span class="mx-2">/</span><a class="hover:underline" href="/tutorials/beginner">Beginner</a><span class="mx-2">/</span><a class="hover:underline" href="/tutorials/beginner/events-and-conditional-rendering">Events and Conditional Rendering</a><span class="mx-2">/</span><span class="text-gray-700 dark:text-gray-200">Conditional Styling and Remounting</span></nav><article><p class="mb-1 text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Chapter <!-- -->3<!-- --> of <!-- -->4</p><h1 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Conditional Styling and Remounting</h1><p class="mb-6 text-lg text-gray-600 dark:text-gray-400">Toggling classes, and how keys decide whether React reuses or rebuilds an element.</p><div><p class="my-4 leading-7 text-gray-700 dark:text-gray-300">Conditional classes are just string expressions. For anything beyond one or two toggles, a helper such as <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-pink-700 dark:bg-gray-700 dark:text-pink-300">classnames</code> keeps it readable.</p><figure class="my-5"><div class="overflow-x-auto rounded-lg bg-gray-800"><pre class="p-4 font-mono text-sm leading-6 text-gray-100"><code>&lt;button className={isActive ? &quot;tab tab-active&quot; : &quot;tab&quot;}&gt;Overview&lt;/button&gt;
+
+// With a helper
+&lt;button className={classNames(&quot;tab&quot;, { &quot;tab-active&quot;: isActive })}&gt;
+  Overview
+&lt;/button&gt;</code></pre></div></figure><h2 class="mt-8 mb-3 text-xl font-bold text-gray-900 dark:text-white md:text-2xl">Conditionals change what React reuses</h2><p class="my-4 leading-7 text-gray-700 dark:text-gray-300">React matches elements between renders by position and type. If the type at a position is the same, React reuses the existing DOM node and its state. If it differs, it destroys the old one and builds a new one.</p><aside aria-label="Advertisement" class="ad-placement w-full text-center my-8"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[250px]" style="display:block;min-height:250px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6753219060" data-ad-format="auto" data-full-width-responsive="true"></ins></aside><figure class="my-5"><div class="overflow-x-auto rounded-lg bg-gray-800"><pre class="p-4 font-mono text-sm leading-6 text-gray-100"><code>// Same type at the same position: the input keeps its value
+{isEditing ? &lt;input className=&quot;edit&quot; /&gt; : &lt;input className=&quot;view&quot; /&gt;}
+
+// Different type: the DOM node is thrown away and rebuilt
+{isEditing ? &lt;input /&gt; : &lt;textarea /&gt;}</code></pre></div></figure><h2 class="mt-8 mb-3 text-xl font-bold text-gray-900 dark:text-white md:text-2xl">Forcing a reset with key</h2><p class="my-4 leading-7 text-gray-700 dark:text-gray-300">Sometimes resetting is exactly what you want - for example, clearing a form when the selected record changes. Give the element a <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-pink-700 dark:bg-gray-700 dark:text-pink-300">key</code> that changes, and React rebuilds it with fresh state.</p><figure class="my-5"><div class="overflow-x-auto rounded-lg bg-gray-800"><pre class="p-4 font-mono text-sm leading-6 text-gray-100"><code>// Each time userId changes, the form remounts with empty state
+&lt;ProfileForm key={userId} userId={userId} /&gt;</code></pre></div></figure><aside class="my-6 rounded-r-lg border-l-4 p-4 border-green-500 bg-green-50 dark:bg-green-900/20"><p class="mb-1 text-sm font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200">Tip</p><p class="leading-7 text-gray-700 dark:text-gray-300">A changing <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-pink-700 dark:bg-gray-700 dark:text-pink-300">key</code> is the cleanest way to reset a subtree. It beats an effect that manually clears half a dozen state values.</p></aside><section class="my-8 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"><header class="border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><h3 class="text-lg font-semibold text-gray-900 dark:text-white">Choose a status label</h3><p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Complete statusLabel so it returns &#x27;Online&#x27; for true, &#x27;Offline&#x27; for false, and &#x27;Unknown&#x27; when the value is undefined or null.</p></header><div class="flex bg-gray-800"><div aria-hidden="true" class="select-none border-r border-gray-700 bg-gray-900 py-3 px-2 text-right font-mono text-xs leading-6 text-gray-500"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div><textarea spellcheck="false" autoCapitalize="off" autoCorrect="off" aria-label="Code editor for Choose a status label" rows="8" class="w-full resize-y bg-gray-800 p-3 font-mono text-sm leading-6 text-gray-100 outline-none">function statusLabel(isOnline) {
+  // Return &quot;Online&quot;, &quot;Offline&quot; or &quot;Unknown&quot;
+}
+
+console.log(statusLabel(true));
+console.log(statusLabel(undefined));</textarea></div><div class="flex flex-wrap gap-2 border-t border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><button type="button" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-60">Run code</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Reset</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Show solution</button></div><iframe title="Sandbox for Choose a status label" sandbox="allow-scripts" srcDoc="&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;style&gt;
+      html, body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+      body { padding: 12px; color: #0f172a; background: #ffffff; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      (function () {
+        var TARGET = &quot;reactjsquiz-runner&quot;;
+        var logs = [];
+
+        function serialise(value) {
+          if (typeof value === &quot;string&quot;) return value;
+          try {
+            return JSON.stringify(value);
+          } catch (error) {
+            return String(value);
+          }
+        }
+
+        [&quot;log&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;].forEach(function (level) {
+          var original = console[level];
+          console[level] = function () {
+            logs.push({
+              level: level,
+              text: Array.prototype.map.call(arguments, serialise).join(&quot; &quot;),
+            });
+            if (original) original.apply(console, arguments);
+          };
+        });
+
+        function post(payload) {
+          parent.postMessage(Object.assign({ source: TARGET }, payload), &quot;*&quot;);
+        }
+
+        function loadScript(src) {
+          return new Promise(function (resolve, reject) {
+            var tag = document.createElement(&quot;script&quot;);
+            tag.src = src;
+            tag.onload = resolve;
+            tag.onerror = function () {
+              reject(new Error(&quot;Could not load &quot; + src));
+            };
+            document.head.appendChild(tag);
+          });
+        }
+
+        var dependencies = [];
+
+        var ready = dependencies.reduce(function (chain, src) {
+          return chain.then(function () {
+            return loadScript(src);
+          });
+        }, Promise.resolve());
+
+        function runChecks(tests) {
+          return (tests || []).map(function (test) {
+            try {
+              var passed = new Function(test.code)();
+              return {
+                name: test.name,
+                passed: passed !== false &amp;&amp; passed !== undefined,
+              };
+            } catch (error) {
+              return { name: test.name, passed: false, error: error.message };
+            }
+          });
+        }
+
+        function run(message) {
+          logs = [];
+          document.getElementById(&quot;root&quot;).innerHTML = &quot;&quot;;
+
+          try {
+            var source = message.code;
+            if (false) {
+              // The classic runtime compiles JSX to React.createElement, which
+              // the UMD global provides. The automatic runtime would emit an
+              // import of react/jsx-runtime, which eval cannot resolve.
+              source = window.Babel.transform(source, {
+                presets: [&quot;env&quot;, [&quot;react&quot;, { runtime: &quot;classic&quot; }]],
+              }).code;
+            }
+            // Indirect eval keeps top-level function declarations on the global
+            // object, which is what the checks below look for.
+            (0, eval)(source);
+          } catch (error) {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: [],
+              error: error.message,
+            });
+            return;
+          }
+
+          function finish() {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: runChecks(message.tests),
+            });
+          }
+
+          // React renders concurrently, so give it a tick to commit before the
+          // checks look at the DOM.
+          if (false) {
+            setTimeout(finish, 80);
+          } else {
+            finish();
+          }
+        }
+
+        window.addEventListener(&quot;message&quot;, function (event) {
+          if (!event.data || event.data.type !== &quot;run&quot;) return;
+          ready
+            .then(function () {
+              run(event.data);
+            })
+            .catch(function (error) {
+              post({ type: &quot;result&quot;, logs: [], tests: [], error: error.message });
+            });
+        });
+
+        window.addEventListener(&quot;error&quot;, function (event) {
+          post({ type: &quot;runtime-error&quot;, message: event.message });
+        });
+
+        post({ type: &quot;ready&quot; });
+      })();
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" class="w-full border-0 bg-white h-0"></iframe></section><section class="my-8 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"><header class="border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><h3 class="text-lg font-semibold text-gray-900 dark:text-white">Toggle a panel open and closed</h3><p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Wire the button so clicking it toggles the paragraph. When open, the paragraph with id &#x27;panel&#x27; should exist; when closed, it should not.</p></header><div class="flex bg-gray-800"><div aria-hidden="true" class="select-none border-r border-gray-700 bg-gray-900 py-3 px-2 text-right font-mono text-xs leading-6 text-gray-500"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div></div><textarea spellcheck="false" autoCapitalize="off" autoCorrect="off" aria-label="Code editor for Toggle a panel open and closed" rows="15" class="w-full resize-y bg-gray-800 p-3 font-mono text-sm leading-6 text-gray-100 outline-none">const { useState } = React;
+
+function Panel() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    &lt;div&gt;
+      &lt;button id=&quot;toggle&quot;&gt;Toggle&lt;/button&gt;
+      {/* Render &lt;p id=&quot;panel&quot;&gt;Panel content&lt;/p&gt; only when isOpen */}
+    &lt;/div&gt;
+  );
+}
+
+ReactDOM.createRoot(document.getElementById(&quot;root&quot;)).render(&lt;Panel /&gt;);</textarea></div><div class="flex flex-wrap gap-2 border-t border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900"><button type="button" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-60">Run code</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Reset</button><button type="button" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">Show solution</button></div><iframe title="Sandbox for Toggle a panel open and closed" sandbox="allow-scripts" srcDoc="&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;style&gt;
+      html, body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+      body { padding: 12px; color: #0f172a; background: #ffffff; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      (function () {
+        var TARGET = &quot;reactjsquiz-runner&quot;;
+        var logs = [];
+
+        function serialise(value) {
+          if (typeof value === &quot;string&quot;) return value;
+          try {
+            return JSON.stringify(value);
+          } catch (error) {
+            return String(value);
+          }
+        }
+
+        [&quot;log&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;].forEach(function (level) {
+          var original = console[level];
+          console[level] = function () {
+            logs.push({
+              level: level,
+              text: Array.prototype.map.call(arguments, serialise).join(&quot; &quot;),
+            });
+            if (original) original.apply(console, arguments);
+          };
+        });
+
+        function post(payload) {
+          parent.postMessage(Object.assign({ source: TARGET }, payload), &quot;*&quot;);
+        }
+
+        function loadScript(src) {
+          return new Promise(function (resolve, reject) {
+            var tag = document.createElement(&quot;script&quot;);
+            tag.src = src;
+            tag.onload = resolve;
+            tag.onerror = function () {
+              reject(new Error(&quot;Could not load &quot; + src));
+            };
+            document.head.appendChild(tag);
+          });
+        }
+
+        var dependencies = [&quot;https://unpkg.com/react@18.3.1/umd/react.development.js&quot;, &quot;https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js&quot;, &quot;https://unpkg.com/@babel/standalone@7.29.8/babel.min.js&quot;];
+
+        var ready = dependencies.reduce(function (chain, src) {
+          return chain.then(function () {
+            return loadScript(src);
+          });
+        }, Promise.resolve());
+
+        function runChecks(tests) {
+          return (tests || []).map(function (test) {
+            try {
+              var passed = new Function(test.code)();
+              return {
+                name: test.name,
+                passed: passed !== false &amp;&amp; passed !== undefined,
+              };
+            } catch (error) {
+              return { name: test.name, passed: false, error: error.message };
+            }
+          });
+        }
+
+        function run(message) {
+          logs = [];
+          document.getElementById(&quot;root&quot;).innerHTML = &quot;&quot;;
+
+          try {
+            var source = message.code;
+            if (true) {
+              // The classic runtime compiles JSX to React.createElement, which
+              // the UMD global provides. The automatic runtime would emit an
+              // import of react/jsx-runtime, which eval cannot resolve.
+              source = window.Babel.transform(source, {
+                presets: [&quot;env&quot;, [&quot;react&quot;, { runtime: &quot;classic&quot; }]],
+              }).code;
+            }
+            // Indirect eval keeps top-level function declarations on the global
+            // object, which is what the checks below look for.
+            (0, eval)(source);
+          } catch (error) {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: [],
+              error: error.message,
+            });
+            return;
+          }
+
+          function finish() {
+            post({
+              type: &quot;result&quot;,
+              logs: logs,
+              tests: runChecks(message.tests),
+            });
+          }
+
+          // React renders concurrently, so give it a tick to commit before the
+          // checks look at the DOM.
+          if (true) {
+            setTimeout(finish, 80);
+          } else {
+            finish();
+          }
+        }
+
+        window.addEventListener(&quot;message&quot;, function (event) {
+          if (!event.data || event.data.type !== &quot;run&quot;) return;
+          ready
+            .then(function () {
+              run(event.data);
+            })
+            .catch(function (error) {
+              post({ type: &quot;result&quot;, logs: [], tests: [], error: error.message });
+            });
+        });
+
+        window.addEventListener(&quot;error&quot;, function (event) {
+          post({ type: &quot;runtime-error&quot;, message: event.message });
+        });
+
+        post({ type: &quot;ready&quot; });
+      })();
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" class="w-full border-0 bg-white h-56 border-t border-gray-200 dark:border-gray-700"></iframe></section></div><nav class="mt-10 flex flex-col gap-3 border-t border-gray-200 pt-6 dark:border-gray-700 sm:flex-row sm:justify-between"><a class="rounded-lg border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800" href="/tutorials/beginner/events-and-conditional-rendering/conditional-rendering">← <!-- -->Conditional Rendering</a><a class="rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700" href="/tutorials/beginner/events-and-conditional-rendering/putting-it-together">Putting It Together<!-- --> →</a></nav></article><aside aria-label="Advertisement" class="ad-placement w-full text-center mt-12 lg:hidden"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[280px]" style="display:block;min-height:280px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6753219060" data-ad-format="auto" data-full-width-responsive="true"></ins></aside></div><div class="hidden lg:sticky lg:top-6 lg:block"><aside aria-label="Advertisement" class="ad-placement w-full text-center max-w-[300px]"><div class="mb-2 text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">Advertisement</div><ins class="adsbygoogle w-full min-h-[600px]" style="display:block;min-height:600px" data-ad-client="ca-pub-7544108447932228" data-ad-slot="6753219060" data-ad-format="auto" data-full-width-responsive="true"></ins></aside></div></div></main><footer class="bg-white dark:bg-gray-800 dark:text-white p-5 border-t-2  flex flex-col justify-center items-center "><a href="https://reactjsquiz.lemonsqueezy.com/checkout/buy/0350c921-370c-4ef1-a6bb-481c043f5428?embed=1" class="lemonsqueezy-button inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full sm:w-auto"><svg aria-hidden="true" class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M6 3v2M10 3v2M14 3v2M4 21h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Support the developer</a></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"siteName":"React JS Quiz","google_analytics_tracking_id":"G-ZW8BQT2FR5","google_adsense_publisher_id":"pub-7544108447932228","tutorial":{"id":5,"slug":"events-and-conditional-rendering","level":"beginner","order":5,"title":"Events and Conditional Rendering","seoTitle":"React Events and Conditional Rendering Tutorial","description":"Handle clicks, keys and form submissions with React's synthetic events, then show and hide parts of the UI based on state.","estimatedMinutes":14,"topics":["events","event handlers","conditional rendering","onclick","synthetic events"],"publishedAt":"2026-08-20","updatedAt":"2026-08-20","path":"/tutorials/beginner/events-and-conditional-rendering","quizPath":"/tutorials/beginner/events-and-conditional-rendering/quiz","chapters":[{"slug":"handling-events","title":"Handling Events","description":"Attaching handlers, the synthetic event object, and passing arguments.","order":1,"path":"/tutorials/beginner/events-and-conditional-rendering/handling-events"},{"slug":"conditional-rendering","title":"Conditional Rendering","description":"Ternaries, logical AND, early returns and when to use each.","order":2,"path":"/tutorials/beginner/events-and-conditional-rendering/conditional-rendering"},{"slug":"conditional-styling-and-keys","title":"Conditional Styling and Remounting","description":"Toggling classes, and how keys decide whether React reuses or rebuilds an element.","order":3,"path":"/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys"},{"slug":"putting-it-together","title":"Putting It Together","description":"A short review of the pieces and how they combine into an interactive component.","order":4,"path":"/tutorials/beginner/events-and-conditional-rendering/putting-it-together"}],"chapterCount":4,"exerciseCount":2,"quizQuestionCount":7,"quiz":{"questions":[]}},"chapter":{"slug":"conditional-styling-and-keys","title":"Conditional Styling and Remounting","description":"Toggling classes, and how keys decide whether React reuses or rebuilds an element.","order":3,"path":"/tutorials/beginner/events-and-conditional-rendering/conditional-styling-and-keys","blocks":[{"type":"paragraph","text":"Conditional classes are just string expressions. For anything beyond one or two toggles, a helper such as `classnames` keeps it readable."},{"type":"code","code":"\u003cbutton className={isActive ? \"tab tab-active\" : \"tab\"}\u003eOverview\u003c/button\u003e\n\n// With a helper\n\u003cbutton className={classNames(\"tab\", { \"tab-active\": isActive })}\u003e\n  Overview\n\u003c/button\u003e"},{"type":"heading","text":"Conditionals change what React reuses"},{"type":"paragraph","text":"React matches elements between renders by position and type. If the type at a position is the same, React reuses the existing DOM node and its state. If it differs, it destroys the old one and builds a new one."},{"type":"code","code":"// Same type at the same position: the input keeps its value\n{isEditing ? \u003cinput className=\"edit\" /\u003e : \u003cinput className=\"view\" /\u003e}\n\n// Different type: the DOM node is thrown away and rebuilt\n{isEditing ? \u003cinput /\u003e : \u003ctextarea /\u003e}"},{"type":"heading","text":"Forcing a reset with key"},{"type":"paragraph","text":"Sometimes resetting is exactly what you want - for example, clearing a form when the selected record changes. Give the element a `key` that changes, and React rebuilds it with fresh state."},{"type":"code","code":"// Each time userId changes, the form remounts with empty state\n\u003cProfileForm key={userId} userId={userId} /\u003e"},{"type":"callout","variant":"tip","text":"A changing `key` is the cleanest way to reset a subtree. It beats an effect that manually clears half a dozen state values."},{"type":"editor","title":"Choose a status label","instructions":"Complete statusLabel so it returns 'Online' for true, 'Offline' for false, and 'Unknown' when the value is undefined or null.","mode":"js","starterCode":"function statusLabel(isOnline) {\n  // Return \"Online\", \"Offline\" or \"Unknown\"\n}\n\nconsole.log(statusLabel(true));\nconsole.log(statusLabel(undefined));","solution":"function statusLabel(isOnline) {\n  if (isOnline === undefined || isOnline === null) return \"Unknown\";\n  return isOnline ? \"Online\" : \"Offline\";\n}\n\nconsole.log(statusLabel(true));\nconsole.log(statusLabel(undefined));","tests":[{"name":"true gives 'Online'","code":"return statusLabel(true) === 'Online';"},{"name":"false gives 'Offline'","code":"return statusLabel(false) === 'Offline';"},{"name":"undefined gives 'Unknown'","code":"return statusLabel(undefined) === 'Unknown';"},{"name":"null gives 'Unknown'","code":"return statusLabel(null) === 'Unknown';"}]},{"type":"editor","title":"Toggle a panel open and closed","instructions":"Wire the button so clicking it toggles the paragraph. When open, the paragraph with id 'panel' should exist; when closed, it should not.","mode":"react","starterCode":"const { useState } = React;\n\nfunction Panel() {\n  const [isOpen, setIsOpen] = useState(false);\n\n  return (\n    \u003cdiv\u003e\n      \u003cbutton id=\"toggle\"\u003eToggle\u003c/button\u003e\n      {/* Render \u003cp id=\"panel\"\u003ePanel content\u003c/p\u003e only when isOpen */}\n    \u003c/div\u003e\n  );\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")).render(\u003cPanel /\u003e);","solution":"const { useState } = React;\n\nfunction Panel() {\n  const [isOpen, setIsOpen] = useState(false);\n\n  return (\n    \u003cdiv\u003e\n      \u003cbutton id=\"toggle\" onClick={() =\u003e setIsOpen(!isOpen)}\u003e\n        Toggle\n      \u003c/button\u003e\n      {isOpen \u0026\u0026 \u003cp id=\"panel\"\u003ePanel content\u003c/p\u003e}\n    \u003c/div\u003e\n  );\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")).render(\u003cPanel /\u003e);","tests":[{"name":"The panel is hidden at first","code":"return document.getElementById('panel') === null;"},{"name":"One click opens it","code":"document.getElementById('toggle').click(); return document.getElementById('panel') !== null;"},{"name":"A second click closes it","code":"document.getElementById('toggle').click(); return document.getElementById('panel') === null;"}]}]},"level":{"slug":"beginner","title":"Beginner"},"previous":{"slug":"conditional-rendering","title":"Conditional Rendering","description":"Ternaries, logical AND, early returns and when to use each.","order":2,"path":"/tutorials/beginner/events-and-conditional-rendering/conditional-rendering","blocks":[{"type":"paragraph","text":"There is no special syntax for conditionals in JSX. You use ordinary JavaScript, and pick whichever form reads best."},{"type":"heading","text":"Ternary: one of two things"},{"type":"code","code":"function Status({ isOnline }) {\n  return \u003cspan\u003e{isOnline ? \"Online\" : \"Offline\"}\u003c/span\u003e;\n}"},{"type":"heading","text":"Logical AND: show it or show nothing"},{"type":"code","code":"function Inbox({ unreadCount }) {\n  return (\n    \u003cdiv\u003e\n      \u003ch2\u003eInbox\u003c/h2\u003e\n      {unreadCount \u003e 0 \u0026\u0026 \u003cp\u003e{unreadCount} unread messages\u003c/p\u003e}\n    \u003c/div\u003e\n  );\n}"},{"type":"callout","variant":"gotcha","text":"Always make the left side a real boolean. `{unreadCount \u0026\u0026 \u003cp\u003e...\u003c/p\u003e}` renders a bare `0` on screen when the count is zero, because 0 is falsy but still renderable."},{"type":"heading","text":"Early return: skip the whole component"},{"type":"paragraph","text":"When a component should render nothing, or something entirely different, return early. It keeps the main path free of nesting."},{"type":"code","code":"function UserProfile({ user, isLoading, error }) {\n  if (isLoading) return \u003cSpinner /\u003e;\n  if (error) return \u003cErrorMessage error={error} /\u003e;\n  if (!user) return null;\n\n  return (\n    \u003csection\u003e\n      \u003ch2\u003e{user.name}\u003c/h2\u003e\n      \u003cp\u003e{user.bio}\u003c/p\u003e\n    \u003c/section\u003e\n  );\n}","caption":"Handle the exceptional cases first, then render the normal one."},{"type":"heading","text":"Choosing between many options"},{"type":"paragraph","text":"For more than two or three branches, an object lookup is usually clearer than nested ternaries."},{"type":"code","code":"const STATUS_LABELS = {\n  pending: \u003cBadge tone=\"warning\"\u003ePending\u003c/Badge\u003e,\n  shipped: \u003cBadge tone=\"info\"\u003eShipped\u003c/Badge\u003e,\n  delivered: \u003cBadge tone=\"success\"\u003eDelivered\u003c/Badge\u003e,\n};\n\nfunction OrderStatus({ status }) {\n  return STATUS_LABELS[status] || \u003cBadge\u003eUnknown\u003c/Badge\u003e;\n}"}]},"next":{"slug":"putting-it-together","title":"Putting It Together","description":"A short review of the pieces and how they combine into an interactive component.","order":4,"path":"/tutorials/beginner/events-and-conditional-rendering/putting-it-together","blocks":[{"type":"paragraph","text":"Events and conditionals are the two halves of interactivity: an event changes state, and the conditional decides what the new state looks like on screen."},{"type":"code","code":"import { useState } from \"react\";\n\nfunction PasswordField() {\n  const [value, setValue] = useState(\"\");\n  const [isVisible, setIsVisible] = useState(false);\n\n  const isTooShort = value.length \u003e 0 \u0026\u0026 value.length \u003c 8;\n\n  return (\n    \u003cdiv\u003e\n      \u003cinput\n        type={isVisible ? \"text\" : \"password\"}\n        value={value}\n        onChange={(event) =\u003e setValue(event.target.value)}\n        aria-invalid={isTooShort}\n      /\u003e\n      \u003cbutton type=\"button\" onClick={() =\u003e setIsVisible(!isVisible)}\u003e\n        {isVisible ? \"Hide\" : \"Show\"}\n      \u003c/button\u003e\n      {isTooShort \u0026\u0026 \u003cp role=\"alert\"\u003eUse at least 8 characters\u003c/p\u003e}\n    \u003c/div\u003e\n  );\n}","caption":"Two pieces of state, two conditionals, two handlers."},{"type":"heading","text":"Notice what is not in state"},{"type":"paragraph","text":"`isTooShort` is derived during render rather than stored. There is no way for it to fall out of sync with `value`, and no handler has to remember to update it."},{"type":"heading","text":"What you have learned"},{"type":"list","items":["Event props take a function and receive a synthetic event.","`preventDefault` stops the browser default; `stopPropagation` stops the bubble.","Use a ternary for either/or, `\u0026\u0026` for show-or-nothing, and early returns for loading and error paths.","A changing `key` remounts a subtree, which is the tidiest way to reset it."]}]},"title":"Conditional Styling and Remounting","description":"Toggling classes, and how keys decide whether React reuses or rebuilds an element. Conditional classes are just string expressions. For anything beyond one..."},"__N_SSG":true},"page":"/tutorials/[level]/[tutorial]/[chapter]","query":{"level":"beginner","tutorial":"events-and-conditional-rendering","chapter":"conditional-styling-and-keys"},"buildId":"_pvC7_Dc0LHpeFEeOU4PS","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
