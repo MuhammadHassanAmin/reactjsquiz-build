@@ -1,8 +1,35 @@
 # React JS Quiz
 
-> Free interactive quizzes and MCQs to prepare for React.js technical interviews, covering Hooks, component lifecycle, performance, testing, TypeScript, state management, and more.
+> Free React interview questions with full answers, step by step tutorials, and interactive quizzes and MCQs to prepare for React.js technical interviews, covering Hooks, component lifecycle, performance, testing, TypeScript, state management, and more.
 
-ReactJsQuiz.com offers structured multiple-choice questions with explanations across every major React topic, plus a blog with in-depth interview-prep articles. Each quiz question includes the correct answer and a short explanation grounded in real React behavior.
+ReactJsQuiz.com offers written interview questions and answers grouped by topic and experience level, tutorials with runnable code exercises, structured multiple-choice questions with explanations across every major React topic, and a blog with in-depth interview-prep articles. Each quiz question includes the correct answer and a short explanation grounded in real React behavior.
+
+## Interview questions
+
+Long-form React interview questions with written answers, the reasoning behind each answer, and the follow-up questions an interviewer is likely to ask next. Grouped by topic and by experience level.
+
+- [React Interview Questions and Answers](https://reactjsquiz.com/react-interview-questions): Hub for 158 React interview questions across 12 topics and 3 experience levels.
+
+### By experience level
+
+- [React Interview Questions for Freshers](https://reactjsquiz.com/react-interview-questions/freshers): What a junior React interview looks like, the questions asked, and a one week preparation plan.
+- [React Interview Questions for Experienced Developers](https://reactjsquiz.com/react-interview-questions/experienced): Trade-off, debugging and architecture questions for mid-level React roles with 2 to 5 years experience.
+- [Senior React Developer Interview Questions](https://reactjsquiz.com/react-interview-questions/senior): Internals, system design, rendering strategy and leadership questions for senior roles.
+
+### By topic
+
+- [React Basics](https://reactjsquiz.com/react-interview-questions/basics): JSX, the virtual DOM, elements versus components, props versus state, keys, fragments, and StrictMode.
+- [Components and Props](https://reactjsquiz.com/react-interview-questions/components-and-props): Composition, prop drilling, children, higher order components, render props, and compound components.
+- [React Hooks](https://reactjsquiz.com/react-interview-questions/hooks): The rules of hooks, useState, useEffect and dependency arrays, useMemo versus useCallback, useRef, useReducer, custom hooks, and the React 19 hooks.
+- [State Management](https://reactjsquiz.com/react-interview-questions/state-management): Context versus Redux, Redux Toolkit, Zustand, TanStack Query, and client state versus server state.
+- [Lifecycle and Effects](https://reactjsquiz.com/react-interview-questions/lifecycle-and-effects): Lifecycle phases and their hook equivalents, render versus commit, stale closures, and correct data fetching.
+- [Performance](https://reactjsquiz.com/react-interview-questions/performance): Unnecessary re-renders, React.memo, code splitting, virtualisation, the Profiler, the React Compiler, and Core Web Vitals.
+- [Forms and Events](https://reactjsquiz.com/react-interview-questions/forms-and-events): Controlled versus uncontrolled inputs, synthetic events, event delegation, validation, React 19 form actions, and accessibility.
+- [React Router](https://reactjsquiz.com/react-interview-questions/routing): Client side routing, BrowserRouter versus HashRouter, useParams, useNavigate, nested and protected routes, and data loaders.
+- [Advanced React](https://reactjsquiz.com/react-interview-questions/advanced): Fiber, reconciliation, concurrent rendering, Suspense, error boundaries, portals, Server Components, hydration, and CSR versus SSR versus SSG versus ISR.
+- [React with TypeScript](https://reactjsquiz.com/react-interview-questions/typescript): Typing props, children, state, refs and events, React.FC, generic components, and typed reducers.
+- [Testing](https://reactjsquiz.com/react-interview-questions/testing): React Testing Library, query priority, async assertions, userEvent, mocking with MSW, and testing hooks.
+- [Coding Challenges](https://reactjsquiz.com/react-interview-questions/coding-challenges): Worked solutions for machine coding rounds, including debounced search, custom hooks, an accessible modal, infinite scroll, and autocomplete.
 
 ## React tutorials
 
